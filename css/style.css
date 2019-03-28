@@ -1,7 +1,17 @@
-.bgImg{
-height:100%;
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
 }
-
-#bgImg{
-height:100%;
+body,h1 {
+  font-family: "Raleway", sans-serif
+}
+body, html {
+  height: 100%
+}
+.bgimg {
+  background-image: url('/Images/forestbridge.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
 }
