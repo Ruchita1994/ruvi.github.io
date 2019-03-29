@@ -5,22 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link href="css/style.css" rel="stylesheet">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="jquery.hideShow.min.js"></script>
 <style>
-body,h1,h2{font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-p {line-height: 2}
+body,h1,h2{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+body, html {
+	height: 100%
+}
+p {
+	line-height: 2
+}
 .bgimg, .bgimg2 {
   min-height: 100%;
   background-position: center;
   background-size: cover;
 }
-.bgimg {background-image: url("Imges/wedding_couple.jpg")}
+.bgimg {
+	background-image: url("Imges/wedding_couple.jpg")
+}
+#rightHandIcon{
+	font-size: 40px;
+    top: 6px;
+}
 </style>
 <body>
 <script>
+  
+    $(document).ready(function(){
+   $("#engaged").hide();
+  $("#engagedDiv").click(function(){
+    $("#engaged").toggle();
+  });
+}); 
+  
 // Set the date we're counting down to
 var countDownDate = new Date("Apr 21, 2019 11:45:00").getTime();
 // Update the count down every 1 second
@@ -55,10 +79,13 @@ var x = setInterval(function() {
   
 <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
   <div class="w3-display-middle w3-text-white w3-center">
+  <h1> Spring is here. . . <br>
+	Wedding bells are near! <br></h1>
+	<h1>Join us as we celebrate the engagement of <h1><!---We're Engaged -->
     <h1 class="w3-jumbo">Ruchita & Vinayak</h1>
-    <h2>Are engaged</h2>
-    <h3>Join us to celebrate</h3>
-    <h3><b>17.07.2017</b></h3>
+    <!---<h3> Save the date as you're invited to our Engagement!</h3> -->
+    <h3> Save the date <span class="glyphicon glyphicon-hand-right" id="rightHandIcon"></span>  <b>17.07.2017</b></h3>
+	<br><br><br>
     <h1 class="w3-jumbo w3-animate-top">The Countdown begins </h1>
     <p id="demo" class="w3-large w3-center"></p>
   </div>
@@ -68,7 +95,7 @@ var x = setInterval(function() {
 
 <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min" id="us">
   <div class="w3-content">
-    <p class="w3-center" id="engagedDiv"><a href="#engaged" class="w3-button w3-black w3-round w3-padding-large w3-large">Details</a></p>
+    <p class="w3-center w3-button" id="engagedDiv">Details</p>
   </div>
 </div>
 
@@ -93,3 +120,4 @@ var x = setInterval(function() {
 </div>
 </body>
 </html>
+
