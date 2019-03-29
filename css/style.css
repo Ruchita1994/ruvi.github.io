@@ -15,3 +15,6 @@ body, html {
   background-position: center;
   background-size: cover;
 }
+#engaged{
+  display:block;
+}
