@@ -10,11 +10,25 @@ body, html {
   height: 100%
 }
 .bgimg {
-  background-image: url('../Imges/forestbridge.jpg');
+  background-image: url('../Imges/wedding_couple.jpg');
   min-height: 100%;
   background-position: center;
   background-size: cover;
 }
 #engaged{
   display:block;
+}
+body,h1,h2{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+body, html {
+	height: 100%
+}
+p {
+	line-height: 2
+}
+
+#rightHandIcon{
+	font-size: 40px;
+    top: 6px;
 }
