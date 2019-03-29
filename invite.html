@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="css/style.css" rel="stylesheet">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="jquery.hideShow.min.js"></script>
 <style>
 body,h1,h2{font-family: "Raleway", sans-serif}
 body, html {height: 100%}
@@ -17,13 +20,46 @@ p {line-height: 2}
 .bgimg {background-image: url("Imges/wedding_couple.jpg")}
 </style>
 <body>
-
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Apr 21, 2019 11:45:00").getTime();
+// Update the count down every 1 second
+var x = setInterval(function() {
+  // Get todays date and time
+  var now = new Date().getTime();    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+   // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+  
+  $(document).ready(function(){
+  $("#engagedDiv").click(function(){
+    $("#engaged").toggle();
+  });
+});
+  
+</script>
+  
 <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
   <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo">Jane & John</h1>
+    <h1 class="w3-jumbo">Ruchita & Vinayak</h1>
     <h2>Are engaged</h2>
     <h3>Join us to celebrate</h3>
     <h3><b>17.07.2017</b></h3>
+    <h1 class="w3-jumbo w3-animate-top">The Countdown begins </h1>
+    <p id="demo" class="w3-large w3-center"></p>
   </div>
 </header>
 
@@ -31,7 +67,7 @@ p {line-height: 2}
 
 <div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min" id="us">
   <div class="w3-content">
-    <p class="w3-center"><a href="#engaged" class="w3-button w3-black w3-round w3-padding-large w3-large">Details</a></p>
+    <p class="w3-center" id="engagedDiv"><a href="#engaged" class="w3-button w3-black w3-round w3-padding-large w3-large">Details</a></p>
   </div>
 </div>
 
