@@ -12,7 +12,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link href="css/style.css" rel="stylesheet">
-<link rel="icon" href="Imges/download1.jpg?123" type="image/x-icon" />
+<link rel="icon" href="Imges/images.jpg?123" type="image/x-icon" />
 <style>
 body,h1,h2{
 	font-family: "Comic Sans MS", cursive, sans-serif;
@@ -35,18 +35,94 @@ p {
 	font-size: 40px;
     top: 6px;
 }
+	.mySlides {display:none;
+height:1000px}
+body,h1,h2{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+body, html {
+	height: 100%
+}
+p {
+	line-height: 2
+}
+.bgimg, .bgimg2 {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.bgimg {
+	background-image: url("ruvi.jpg")
+}
+#rightHandIcon{
+	font-size: 40px;
+    top: 6px;
+}
+.w3-content{
+	background:none !important;
+}
+.w3-large w3-container{
+color:#fff;
+}
 </style>
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Invitation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+
+<style>
+
+</style>
+</head>
+
 <body>
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <img src="ruvi.jpg" style="width:100%">
+  <div class="w3-display-middle w3-large w3-container w3-padding-16">
+    <h1> Spring is here. . . </h1>
+	<h1> Wedding bells are near! </h1>
+	<h3>Join us as we celebrate the engagement of <h1><!---We're Engaged -->
+    <h1 class="w3-jumbo">Ruchita & Vinayak</h1>
+    <!---<h3> Save the date as you're invited to our Engagement!</h3> -->
+    <h3> Save the date <span class="glyphicon glyphicon-hand-right" id="rightHandIcon"></span>  <b>21.04.2019</b></h3>
+	<br><br><br>
+    <h2 class="w3-jumbo w3-animate-top">The Countdown begins </h1>
+    <p id="demo" class="w3-large w3-center"></p>
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="ourPic.png" style="width:100%">
+	<div class="w3-display-topright w3-large w3-container w3-padding-16">
+    <h2>Address: </h2>
+	<p>At & Post: Satpati, Tal & Dist:Palghar ,Vishal Mandal ,401405 </p>
+  </div>
+</div>
+
+
+</div>
+
 <script>
-  
-    $(document).ready(function(){
-   $("#engaged").hide();
-  $("#engagedDiv").click(function(){
-    $("#engaged").toggle();
-  });
-}); 
-  
-// Set the date we're counting down to
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 9000); // Change image every 2 seconds
+}
+    // Set the date we're counting down to
 var countDownDate = new Date("Apr 21, 2019 11:45:00").getTime();
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -65,61 +141,18 @@ var x = setInterval(function() {
    // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "Just Engaged";
   }
 }, 1000);
-  
+
   $(document).ready(function(){
    $("#engaged").hide();
   $("#engagedDiv").click(function(){
     $("#engaged").toggle();
   });
-});
-  
-	
+}); 
+
 </script>
-  
-<header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
-  <div class="w3-display-middle w3-text-white w3-center">
-  <h1> Spring is here. . . <br>
-	Wedding bells are near! <br></h1>
-	<h1>Join us as we celebrate the engagement of <h1><!---We're Engaged -->
-    <h1 class="w3-jumbo">Ruchita & Vinayak</h1>
-    <!---<h3> Save the date as you're invited to our Engagement!</h3> -->
-    <h3> Save the date <span class="glyphicon glyphicon-hand-right" id="rightHandIcon"></span>  <b>21.04.2019</b></h3>
-	<br><br><br>
-    <h1 class="w3-jumbo w3-animate-top">The Countdown begins </h1>
-    <p id="demo" class="w3-large w3-center"></p>
-  </div>
-</header>
 
-
-
-<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min" id="us">
-  <div class="w3-content">
-    <p class="w3-center w3-button" id="engagedDiv">Details</p>
-  </div>
-</div>
-
-<!-- information -->
-<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="engaged">
-  <div class="w3-content">
-    <h1 class="w3-text-grey"><b>THE ENGAGEMENT</b></h1>
-    <img class="w3-round-large w3-grayscale-min" src="/w3images/wedding_location.jpg" style="width:100%;margin:64px 0">
-    <div class="w3-row">
-      <div class="w3-half">
-        <h2>When</h2>
-        <p>Ring Ceremony - 11:30am</p>
-        <p>Lunch - 1:00pm</p>
-      </div>
-      <div class="w3-half">
-        <h2>Where</h2>
-        <p>Satpati</p>
-        <p>Palghar</p>
-      </div>
-    </div>
-  </div>
-</div>
 </body>
 </html>
-
