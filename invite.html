@@ -43,27 +43,23 @@ body,h1,h2{
 body, html {
 	height: 100%
 }
-p {
-	line-height: 2
-}
-.bgimg, .bgimg2 {
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
-}
-.bgimg {
-	background-image: url("Imges/ruvi.jpg?67")
-}
+
 #rightHandIcon{
 	font-size: 40px;
-    top: 6px;
+        top: 6px;
 }
 .w3-content{
 	background:none !important;
 }
 .w3-large w3-container{
-color:#fff;
+	color:#fff;
 }
+#Address{
+	height:auto;
+}
+.addP{
+	font-size:20px;
+	}
 </style>
 <!DOCTYPE html>
 <html>
@@ -82,7 +78,7 @@ color:#fff;
 <div class="w3-content w3-display-container">
 
 <div class="w3-display-container mySlides">
-  <img src="ruvi.jpg" style="width:100%">
+  <img src="Imges/ruvi.jpg?67" style="width:100%">
   <div class="w3-display-middle w3-large w3-container w3-padding-16">
     <h1> Spring is here. . . </h1>
 	<h1> Wedding bells are near! </h1>
@@ -96,11 +92,14 @@ color:#fff;
   </div>
 </div>
 
-<div class="w3-display-container mySlides">
+<div class="w3-display-container mySlides" id="Address">
   <img src="Imges/ourPic.png?789" style="width:100%">
 	<div class="w3-display-topright w3-large w3-container w3-padding-16">
     <h2>Address: </h2>
-	<p>At & Post: Satpati, Tal & Dist:Palghar ,Vishal Mandal ,401405 </p>
+		<p class="addP">At & Post: Satpati,</p>
+		<p class="addP">Tal & Dist:Palghar,</p>
+		<p class="addP">Vishal Mandal,</p>
+		<p class="addP">401405</p>
   </div>
 </div>
 
